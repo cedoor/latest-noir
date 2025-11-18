@@ -39,8 +39,12 @@ describe("Verifier", function () {
     const backend = new UltraHonkBackend((circuit as CompiledCircuit).bytecode, { threads: 4 })
   
     const { witness } = await noir.execute({ x: 5, y: 10, result: 15 })
-    const { proof, publicInputs } = await backend.generateProof(witness, { keccak: true })
+    const { proof, publicInputs } = await backend.generateProof(witness, { keccakZK: true })
   
+    const isValidd = await backend.verifyProof({ proof, publicInputs }, { keccakZK: true })
+    
+    console.log('isValid', isValidd)
+
     await backend.destroy()
 
     const isValid = await verifier.verify(proof, publicInputs)
