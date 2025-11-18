@@ -1,0 +1,38 @@
+{
+  "name": "latest-noir",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "compile:noir": "./scripts/compile.sh",
+    "compile:solidity": "hardhat compile",
+    "test": "pnpm compile:noir && hardhat test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cedoor/latest-noir.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cedoor/latest-noir/issues"
+  },
+  "homepage": "https://github.com/cedoor/latest-noir#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^4.0.3",
+    "@nomicfoundation/hardhat-ethers-chai-matchers": "^3.0.2",
+    "@nomicfoundation/hardhat-mocha": "^3.0.7",
+    "@nomicfoundation/hardhat-network-helpers": "^3.0.3",
+    "@nomicfoundation/hardhat-typechain": "^3.0.1",
+    "@types/chai": "^5.2.3",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^24.10.1",
+    "chai": "^5.3.3",
+    "ethers": "^6.15.0",
+    "hardhat": "^3.0.15",
+    "mocha": "^11.7.5",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "@aztec/bb.js": "3.0.0-nightly.20251104",
+    "@noir-lang/noir_js": "1.0.0-beta.15"
+  }
+}

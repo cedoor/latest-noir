@@ -1,0 +1,12 @@
+target/
+proofs/
+node_modules/
+cache/
+artifacts/
+coverage/
+coverage.json
+types/
+
+# Hardhat files
+.hardhat/
+
